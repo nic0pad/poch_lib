@@ -1,0 +1,36 @@
+.button {
+    margin: 5px 0;
+    padding: 10px 30px;
+    color: white;
+    border: none;
+    width: 150px;
+}
+
+.button:hover {
+    cursor: pointer;
+}
+
+.button-add-book {
+    background-color: $colour-green;
+}
+
+.search-form {
+    text-align: left;
+    &__errors {
+        margin: 5px 0;
+        color: $colour-red;
+    }
+    &__button {
+        .button-search {
+            background-color: $colour-green;
+        }
+        .button-cancel {
+            background-color: $colour-red;
+        }
+    }
+    &__element {
+        &__input {
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,45 @@
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    @media (max-width: 900px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: 600px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.book {
+    text-align: left;
+    background-color: $color-grey;
+    margin: 10px;
+    padding: 10px;
+    border: thin solid;
+    p {
+        margin: 1em;
+        padding-right: 1em;
+    }
+    &__title {
+        font-weight: bold;
+        position: relative;
+        padding-right: 20px;
+        i {
+            position: absolute;
+            top: 0em;
+            right: 0em;
+        }
+        i:hover {
+            cursor: pointer;
+        }
+    }
+    &__id {
+        font-weight: bold;
+        font-style: italic;
+    }
+    &__image {
+        text-align: center;
+        img{
+            width: 128px;
+        }
+    }
+}
