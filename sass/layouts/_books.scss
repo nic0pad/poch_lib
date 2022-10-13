@@ -15,18 +15,16 @@
     margin: 10px;
     padding: 10px;
     border: thin solid;
-    p {
-        margin: 1em;
-        padding-right: 1em;
-    }
     &__title {
         font-weight: bold;
         position: relative;
         padding-right: 20px;
+        margin-right: 0.5em;
         i {
             position: absolute;
             top: 0em;
             right: 0em;
+            color: $colour-green;
         }
         i:hover {
             cursor: pointer;
@@ -41,5 +39,9 @@
         img{
             width: 128px;
         }
+    }
+    p {
+        margin: 1em;
+        padding-right: 1em;
     }
 }
