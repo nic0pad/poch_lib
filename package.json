@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./sass/main.scss:./public/css/style.css"
+    "dev": "http-server",
+    "sass": "sass --watch ./sass/main.scss:./static/css/style.css"
   },
   "repository": {
     "type": "git",
@@ -12,6 +13,9 @@
   },
   "author": "",
   "license": "ISC",
+  "dependencies": {
+    "http-server": "^14.1.0"
+  },
   "bugs": {
     "url": "https://github.com/nic0pad/poch_lib/issues"
   },
