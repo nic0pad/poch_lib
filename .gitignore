@@ -1,0 +1,4 @@
+package-lock.json
+/node_modules
+/static/css/style.css.map
+.DS_Store
