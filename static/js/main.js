@@ -63,6 +63,8 @@ function initDomStructure() {
     favoriteBooks.className = "favorites grid";
     favoriteBooks.id = "favorites";
     pochList.appendChild(favoriteBooks);
+
+    createModalBox(document.getElementById("myBooks"));
 }
 
 // Ajouter un champ input de recherche
@@ -165,7 +167,6 @@ function displayResultSearch(books) {
         searchDiv.innerHTML = "Aucun livre n'a été trouvé";
     } else {
         resultBooks = books.items;
-        console.log(resultBooks);
         for (let book of books.items) {
             searchDiv.appendChild(displayBook(book, "search"));
         }
@@ -214,7 +215,6 @@ function displayBook(book, type) {
     let title = addElement("Titre : ", book.volumeInfo.title, "book__title");
     title.appendChild(addIcon(type, book.id));
     divBook.appendChild(title);
-    //divBook.appendChild(addElement("Titre : ", book.volumeInfo.title, "book__title"));
     divBook.appendChild(addElement("Id : ", book.id, "book__id"));
     divBook.appendChild(addElement("Auteur : ", auteur, "book__author"));
     divBook.appendChild(addElement("Description : ", description, "book__description"));
@@ -289,7 +289,7 @@ function addFavoriteBook(bookId) {
         favoriteDiv.appendChild(displayBook(book, "favorite"));
         saveBook(book);
     } else {
-        alert("Vous ne pouvez ajouter deux fois le même livre");
+        displayModalBox("Vous ne pouvez ajouter deux fois le même livre");
     }
 }
 
@@ -313,9 +313,7 @@ function getBooks() {
 function saveBook(book) {
     let books = getBooks();
     books.push(book);
-    console.log(book);
     window.localStorage.setItem("books", JSON.stringify(books));
-    console.log("books saved");
 }
 
 function deleteBook(bookId) {
@@ -323,7 +321,6 @@ function deleteBook(bookId) {
     let index = books.findIndex(book => book.id === bookId);
     books.splice(index, 1);
     window.localStorage.setItem("books", JSON.stringify(books));
-    console.log("book deleted");
 }
 
 // Afficher les livres dans la div de favoris
