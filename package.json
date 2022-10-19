@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "http-server",
-    "lint": "eslint ./static/js/*.js",
-    "sass": "sass --watch ./sass/main.scss:./static/css/style.css"
+    "lint": "eslint ./public/static/js/*.js",
+    "sass": "sass --watch ./sass/main.scss:./public/static/css/style.css"
   },
   "repository": {
     "type": "git",
