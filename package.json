@@ -1,0 +1,31 @@
+{
+  "name": "poch_lib",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "http-server",
+    "lint": "eslint ./public/static/js/*.js",
+    "sass": "sass --watch ./sass/main.scss:./public/static/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nic0pad/poch_lib.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "http-server": "^14.1.0"
+  },
+  "bugs": {
+    "url": "https://github.com/nic0pad/poch_lib/issues"
+  },
+  "homepage": "https://github.com/nic0pad/poch_lib#readme",
+  "devDependencies": {
+    "eslint": "^8.25.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-n": "^15.3.0",
+    "eslint-plugin-promise": "^6.1.0"
+  }
+}
