@@ -38,6 +38,11 @@ Press Ctrl-C to stop local server.
 
 ## sass
 
+Install sass:
+```
+npm install -g sass
+```
+
 If you modify scss file, you need to compile to update css file with this command:
 ```
 npm run sass
