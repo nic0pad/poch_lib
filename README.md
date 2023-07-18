@@ -1,3 +1,9 @@
+Project of Single Page Application with SASS, no JS framework (only DOM manipulation) and use Google Books API.
+
+Two main features:
+- finding and adding a book to its list;
+- viewing books and deleting a book.
+
 # Prerequisite
 
 Installation of npm and Node.js.
